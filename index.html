@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleTSE Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-description {
+            padding: 15px;
+        }
+
+        .table-container {
+            margin: 30px 0;
+        }
+
+        /* table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        } */
+
+        table th, table td {
+            padding: 12px 8px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            word-wrap: break-word;
+        }
+        .divider {
+            margin: 40px 0;
+            height: 1px;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <h2>StyleTSE Demo</h2>
+
+        <div class="divider"></div>
+
+        <div class="card">
+            <div class="card-description">
+                <p> 💡💡 StyleTSE model takes a single text clue that describes the speaking style of the target speech. It handles text input of various lengths. </p>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <h3>Text Description - Long</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mixture</th>
+                        <th>Text Clue</th>
+                        <th>Estimate Target</th>
+                        <th>True Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_long/mix/test_mixed_speech_11_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "With excitement in her nauseated tone, she speaks energetically with a high-pitched voice."
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_long/est/test_mixed_speech_11_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_long/true/005.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_long/mix/test_mixed_speech_68_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "The man conveys his message energetically, speaking rapidly and with a low voice. "
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_long/est/test_mixed_speech_68_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_long/true/8855_283242_000081_000001.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_long/mix/test_mixed_speech_7594_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "The man addresses the audience with an ordinary pitch, talking at a regular speed with normal energy."
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_long/est/test_mixed_speech_7594_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_long/true/1513_140222_000162_000001.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+
+            <h3>Text Description - Mid</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mixture</th>
+                        <th>Text Clue</th>
+                        <th>Estimate Target</th>
+                        <th>True Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_mid/mix/test_mixed_speech_5875_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "A  sad speaker in a high pitch"
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_mid/est/test_mixed_speech_5875_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_mid/true/021.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_mid/mix/test_mixed_speech_12_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "He has a low voice. "
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_mid/est/test_mixed_speech_12_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_mid/true/3486_166424_000024_000003.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_mid/mix/test_mixed_speech_9571_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "The man sounds cheerful."
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_mid/est/test_mixed_speech_9571_0_est_1.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_mid/true/0012_000836.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+
+            <h3>Text Description - Short</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mixture</th>
+                        <th>Text Clue</th>
+                        <th>Estimate Target</th>
+                        <th>True Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_short/mix/test_mixed_speech_11_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "Voice pitch is sharp"
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_short/est/test_mixed_speech_11_0_est_1.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_short/true/005.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_short/mix/test_mixed_speech_68_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "Speaks at a quick pace."
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_short/est/test_mixed_speech_68_0_est_1.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_short/true/8855_283242_000081_000001.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_short/mix/test_mixed_speech_9734_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "British speaker."
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_short/est/test_mixed_speech_9734_0_est_1.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/text_only_short/true/p254_359.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+
+
+            <div class="card">
+                <div class="card-description">
+                    <p>  🌻🌻 StyleTSE model takes a reference audio and a text prompt to extract matched styles, including emotion, accent, pitch, gender, and speaker identity. </p>
+                </div>
+            </div>
+
+
+            <h3>Emotion</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mixture</th>
+                        <th>Reference Audio</th>
+                        <th>Text Prompt</th>
+                        <th>Estimate Target</th>
+                        <th>True Target</th>
+                        <th>Emotion Class</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/emotion/mix/test_mixed_speech_278_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/emotion/reference/ESD_0018_Sad_0018_001064.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "Isolate the voice that echoes the enroll's emotion."
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/emotion/est/test_mixed_speech_278_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/emotion/true/0016_001343.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            Sad
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/emotion/mix/test_mixed_speech_366_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/emotion/reference/022.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "Select the voice with a similar emotional tone."
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/emotion/est/test_mixed_speech_366_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/emotion/true/012.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            Angry
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/emotion/mix/test_mixed_speech_375_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/emotion/reference/0014_000807.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "Separate the speech with a similar mood to the clue."
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/emotion/est/test_mixed_speech_375_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/emotion/true/0020_000982.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            Happy
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+            
+
+            <h3>Accent</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mixture</th>
+                        <th>Reference Audio</th>
+                        <th>Text Prompt</th>
+                        <th>Estimate Target</th>
+                        <th>True Target</th>
+                        <th>Accent Class</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/accent/mix/test_mixed_speech_111_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/accent/reference/1088_134315_000076_000000.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "Keep only the accent from the enroll."
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/accent/est/test_mixed_speech_111_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/accent/true/6544_71420_000094_000000.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            American
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/accent/mix/test_mixed_speech_153_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/accent/reference/p232_307.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "Extract the same accented speech."
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/accent/est/test_mixed_speech_153_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/accent/true/p250_481.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            British
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/accent/mix/test_mixed_speech_175_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/accent/reference/p275_098.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "Extract speech with similar accent"
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/accent/est/test_mixed_speech_175_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/accent/true/p275_269.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            Scottish
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/accent/mix/test_mixed_speech_150_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/accent/reference/p335_164.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "Identify same accent as the audio, should be newzealand."
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/accent/est/test_mixed_speech_150_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/accent/true/p335_011.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            New Zealand
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+
+
+
+            <h3>Speaker Identity</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mixture</th>
+                        <th>Reference Audio</th>
+                        <th>Text Prompt</th>
+                        <th>Estimate Target</th>
+                        <th>True Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/speaker/mix/test_mixed_speech_1_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/speaker/reference/8193_116804_000063_000002.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "Identify and enhance the same speaker."
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/speaker/est/test_mixed_speech_1_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/speaker/true/8193_116804_000047_000001.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/speaker/mix/test_mixed_speech_159_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/speaker/reference/002.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "Filter out all but the identical speaker."
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/speaker/est/test_mixed_speech_159_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/speaker/true/038.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/speaker/mix/test_mixed_speech_526_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/speaker/reference/1365_134830_000029_000002.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/speaker/est/test_mixed_speech_526_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/speaker/true/480_127525_000018_000000.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/speaker/mix/test_mixed_speech_442_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/speaker/reference/1088_134315_000044_000000.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            N/A
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/speaker/est/test_mixed_speech_442_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/speaker/true/1088_134315_000094_000001.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+
+
+            <h3>Gender</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mixture</th>
+                        <th>Reference Audio</th>
+                        <th>Text Prompt</th>
+                        <th>Estimate Target</th>
+                        <th>True Target</th>
+                        <th>Gender Class</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/gender/mix/test_mixed_speech_318_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/gender/reference/3914_10088_000031_000000.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "Select gender-consistent audio."
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/gender/est/test_mixed_speech_318_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/gender/true/7939_120325_000053_000003.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            Male
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/gender/mix/test_mixed_speech_484_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/gender/reference/p250_481.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "Separate by sex similarity."
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/gender/est/test_mixed_speech_484_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/gender/true/7967_117095_000047_000001.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            Female
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/gender/mix/test_mixed_speech_487_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/gender/reference/020.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "Retain voice with same gender."
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/gender/est/test_mixed_speech_487_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/gender/true/7932_93470_000077_000001.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            Female
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+
+
+            <h3>Pitch</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mixture</th>
+                        <th>Reference Audio</th>
+                        <th>Text Prompt</th>
+                        <th>Estimate Target</th>
+                        <th>True Target</th>
+                        <th>Pitch Class</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/pitch/mix/test_mixed_speech_314_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/pitch/reference/6006_57831_000017_000000.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "Extract similar pitched speaker to the clue."
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/pitch/est/test_mixed_speech_314_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/pitch/true/5039_1188_000005_000000.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            High
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="audio/pitch/mix/test_mixed_speech_52_0.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/pitch/reference/p245_310.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            "Extract similar pitched people to the enroll."
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/pitch/est/test_mixed_speech_52_0_est.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            <audio controls>
+                                <source src="audio/pitch/true/5147_32136_000032_000002.wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </td>
+                        <td>
+                            Low
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
