@@ -45,9 +45,9 @@ The TextrolMix dataset is derived from the public dataset [Textrolspeech](https:
 |  Accent          | 11%        | american, british, scottish, irish |
 |                  |            | south african, canadian, australian|
 |  Pitch           | 10%        | high, normal, low                  |
-
-Note: accent is from source corpora.
 ```
+Note: accent is from source corpora.
+
 
 - **TSE performance on TextrolMix test set**: SI-SDRi (dB)
 ```csv
