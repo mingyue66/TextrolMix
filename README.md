@@ -2,7 +2,7 @@
 Welcome to the official webpage for the TextrolMix dataset. This dataset aims to support text-guided Target Speaker Extraction (TSE). 
 
 
-Listen to the demo produced by the model trained on this dataset!  [![ICASSP Paper Demo]( https://img.shields.io/badge/StyleTSE-Demo-blue)](index.html)
+Listen to the demo produced by the model trained on this dataset!  [![ICASSP Paper Demo]( https://img.shields.io/badge/StyleTSE-Demo-blue)](demo_StyleTSE/index.html)
 
 
 <!-- <br>
